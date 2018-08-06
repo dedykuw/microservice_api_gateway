@@ -1,0 +1,11 @@
+server.port=8080
+spring.application.name=zuul-server
+#Zuul routes. Here for /student path, we are routing to localhost:8090 with extra path after that.
+#zuul.routes.backlog.url=http://localhost:8081
+
+#Ribbon is auto integrated with Zuul and for this exercise we are not using that.
+ribbon.eureka.enabled=true
+eureka.client.service-url.default-zone: http://10.101.5.230:8761/eureka/
+zuul.routes.backlog.service-id=backlog
+ribbon.eager-load.enabled=true
+ribbon.eager-load.clients=
